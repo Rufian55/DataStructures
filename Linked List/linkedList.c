@@ -1,10 +1,10 @@
 /**************************************************************************
-** CS261-400-S16	Assignment 3, Part 1	Due: 24 Apr 2016
-** Chris Kearns (kearnsc@oregonstate.edu)
+** Date: 24 Apr 2016
+** Chris Kearns
 ** linkedList.c
 ** A linked list deque implementation in C and utilized as below.
-** Compile:
-   gcc -g -Wall -std=c99 linkedList.h linkedList.c linkedListMain.c -o prog
+** Compile: 
+** gcc -g -Wall -std=c99 linkedList.h linkedList.c linkedListMain.c -o prog
 **************************************************************************/
 #include "linkedList.h"
 #include <assert.h>
@@ -28,7 +28,7 @@ struct LinkedList {
 
 /* Allocates the list's sentinels and sets the size to 0.
 	param: 	list = pointer to the LinkedList.
-	pre:		Stuct Link defined.
+	pre:	Stuct Link defined.
 	post:	memory allocated for front and back sentinel Links
 	post:	size var set to zero
 	post:	front sentinel's next and prev point to back sentinel.
@@ -51,7 +51,7 @@ static void init(struct LinkedList* list) {
 	param: 	list = pointer to the LinkedList.
 	param:	link: inseret new Link in frot of "link".
 	param:	value = the value contained within the new Link.	
-	pre:		An initiated list.
+	pre:	An initiated list.
 	post:	memory allocated for new Link
 	post:	size var incremented.
 	post:	preceding and post links next and prev point appropriately.
