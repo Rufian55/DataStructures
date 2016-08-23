@@ -1,6 +1,6 @@
 /**************************************************************************
-** CS261-400-S16	Assignment 3, Part 1	Due: 24 Apr 2016
-** Chris Kearns (kearnsc@oregonstate.edu)
+** Date: 24 Apr 2016
+** Author: Chris Kearns
 ** linkedList.c
 ** A linked list deque implementation in C and utilized as below.
 ** Compile:
@@ -28,7 +28,7 @@ struct LinkedList {
 
 /* Allocates the list's sentinels and sets the size to 0.
 	param: 	list = pointer to the LinkedList.
-	pre:		Stuct Link defined.
+	pre:	Stuct Link defined.
 	post:	memory allocated for front and back sentinel Links
 	post:	size var set to zero
 	post:	front sentinel's next and prev point to back sentinel.
@@ -51,7 +51,7 @@ static void init(struct LinkedList* list) {
 	param: 	list = pointer to the LinkedList.
 	param:	link: inseret new Link in frot of "link".
 	param:	value = the value contained within the new Link.	
-	pre:		An initiated list.
+	pre:	An initiated list.
 	post:	memory allocated for new Link
 	post:	size var incremented.
 	post:	preceding and post links next and prev point appropriately.
@@ -79,7 +79,7 @@ static void addLinkBefore(struct LinkedList* list, struct Link* link, TYPE value
    Given link identified by traversing list with next/prev pointers.
 	param: 	list = pointer to the LinkedList.
 	param:	link: insert new Link in frot of "link".
-	pre:		An initiated non empty list.
+	pre:	An initiated non empty list.
 	post:	removed link's memory freed.
 	post:	size var decremented.
 	post:	preceding and post links next and prev point appropriately.
@@ -101,9 +101,9 @@ static void removeLink(struct LinkedList* list, struct Link* link) {
 
 /* Allocates and initializes a list.
 	param:	none.
-	pre:		LinkedList struct defined.
+	pre:	LinkedList struct defined.
 	post:	see init() function comments.
-	returns:	pointer to the linked list.
+	returns: pointer to the linked list.
 */
 struct LinkedList* linkedListCreate() {
 	struct LinkedList* newDeque = malloc(sizeof(struct LinkedList));
@@ -147,7 +147,7 @@ void linkedListAddBack(struct LinkedList* list, TYPE value) {
 
 /* Returns the value of the link at the front of the deque.
 	param:	Linkedlist pointer.
-	pre:		A non empty list.
+	pre:	A non empty list.
 	post:	No changes.
 	return:	front Link node value var contents.
 */
@@ -158,7 +158,7 @@ TYPE linkedListFront(struct LinkedList* list) {
 
 /* Returns the value of the link at the back of the deque.
 	param:	Linkedlist pointer.
-	pre:		A non empty list.
+	pre:	A non empty list.
 	post:	No changes.
 	return:	back Link node value var contents.
 */
@@ -169,7 +169,7 @@ TYPE linkedListBack(struct LinkedList* list) {
 
 /* Removes the link at the front of the deque.
 	param:	list pointer.
-	pre:		A non empty list.
+	pre:	A non empty list.
 	Note:	see removeLink() comments.
 */
 void linkedListRemoveFront(struct LinkedList* list) {
@@ -179,7 +179,7 @@ void linkedListRemoveFront(struct LinkedList* list) {
 
 /* Removes the link at the back of the deque.
 	param:	list pointer.
-	pre:		A non empty list.
+	pre:	A non empty list.
 	Note:	see removeLink() comments.
 */
 void linkedListRemoveBack(struct LinkedList* list) {
@@ -198,7 +198,7 @@ int linkedListIsEmpty(struct LinkedList* list) {
 /* Prints the values of the links in the deque from
    front to back.
 	param:	list pointer.
-	pre:		a non empty list.
+	pre:	a non empty list.
 	post:	no changes.
 	Note:	LT defined in linkedList.h
 */
@@ -228,7 +228,7 @@ void linkedListAdd(struct LinkedList* list, TYPE value) {
 	param:	list pointer.
 	param:	value to be searched for.
 	post:	no changes.
-	returns:	an int bool as appropriate.
+	returns: an int bool as appropriate.
 */
 int linkedListContains(struct LinkedList* list, TYPE value) {
 	int i;
@@ -247,7 +247,7 @@ int linkedListContains(struct LinkedList* list, TYPE value) {
 /*Removes the first occurrence of a link with the given value.
 	param:	list pointer.
 	param:	value to be searched for and remvoved.
-	pre:		A non empty list.
+	pre:	A non empty list.
 	post:	first occurence, if any, Link is removed.
 	Note:	See removeLink comments.
 	Note:	search halted once first occurence found.
