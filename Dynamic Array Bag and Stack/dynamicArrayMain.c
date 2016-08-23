@@ -1,3 +1,11 @@
+/**************************************************************************************
+ * dynamicArrayMain.c
+ * Date: 23 Aug 2016
+ * Author: Chris Kearns
+ * An alternate main for dynamic array implementation to test memory usage under 
+ * various load.  ./makefile needs to be modified to use this main.
+*************************************************************************************/
+
 #include "dynArray.h"
 #include <stdio.h>
 #include <time.h>
