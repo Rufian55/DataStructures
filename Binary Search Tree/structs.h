@@ -1,6 +1,6 @@
 /* file: structs.h
-   Chris Kearns  CS261-400-S16
-   Assignement 4   7 Apr 2016
+   Chris Kearns
+   7 Apr 2016
    struct definition file
 
 You can modify this structure to store whatever
