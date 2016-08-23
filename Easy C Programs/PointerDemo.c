@@ -1,5 +1,4 @@
-/* CS261- Assignment 1 - Q. 0 */
-/* Name: Chris Kearns
+/* Author: Chris Kearns
  * Date: 10 April 2016
  * Solution description: Pointer manipulation Demo in C.
  */
@@ -16,7 +15,7 @@ void fooA(int* iptr){
 	printf("From fooA(): Memory adress pointed to by iptr = %p\n", iptr);
 
 	/*Print the address of iptr itself*/
-	printf("From fooA(): Memory address of iptr itself = %p\n", (void*)&iptr); // [1] [3]
+	printf("From fooA(): Memory address of iptr itself = %p\n", (void*)&iptr);
 }
 
 
@@ -25,7 +24,7 @@ int main(){
 	int x = 261;
 
 	/*print the address of x*/
-	printf("From main(): Address of x = %p\n", (void*)&x); // [2] [3]
+	printf("From main(): Address of x = %p\n", (void*)&x);
  
 	/*Call fooA() with the address of x*/
 	fooA(&x);
@@ -36,7 +35,7 @@ int main(){
 	return 0;
 }
 /*
-[Citations]
+[See the following resources]
 [1] Cast method found at http://stackoverflow.com/questions/30183499/printing-address-a-pointer-points-to-value-the-address-points-to-and-the-addre
 [2] Cast method found at http://stackoverflow.com/questions/5286451/how-to-print-variable-addresses-in-c
 [3] Line 18 and Line 26 work without '(void*)', however, when compiled with -pedantic errors flag on, gcc will issue a warning.
