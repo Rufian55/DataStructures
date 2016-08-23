@@ -1,6 +1,7 @@
 /**************************************************************************************
-** Program Filename:	Convertor.c				Date:  31 March 2016
-** Author: Chris Kearns	Course: CS261-400_Spring_2016	email: kearnsc@oregonstate.edu
+** Program Filename:	Convertor.c
+** Date:  31 March 2016
+** Author: Chris Kearns
 ** Description: A short demo program in C that prompts user for an inch or cm value
 ** and converts it from inches to cm or vice versa. Includes input validation.
 ** Inputs: User prompted.
@@ -12,7 +13,7 @@
 
 int main(int argc, char **argv) {
 	int input = 0;			// Our initial user input prompt collection var.
-	double inchInput = 0;	// Local user input collection var.
+	double inchInput = 0;		// Local user input collection var.
 	double cm;			// Our resulting cm var.
 	double cmInput = 0;		// Local user input collection var.
 	double inch;			// Our resulting inch var.
