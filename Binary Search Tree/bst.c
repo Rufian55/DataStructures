@@ -1,7 +1,7 @@
 /* File: bst.c
    Chris Kearns
    7 Apr 2016
-   Implementation of the binary search tree data structure.
+   Implementation of the Binary Search Tree data structure.
 */
 #include <stdlib.h>
 #include <stdio.h>
@@ -441,7 +441,7 @@ void testContainsBSTree() {
 
 	printTestResult(containsBSTree(tree, &myData4), "containsBSTree", "when test containing 10 as left of left of root");
 
-	//check containsBSTree function when the tree does not contain a node    
+	// Check containsBSTree function when the tree does not contain a node.    
 	printTestResult(!containsBSTree(tree, &myData5), "containsBSTree", "when test containing 111, which is not in the tree");
 }
 
