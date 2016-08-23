@@ -1,15 +1,12 @@
-/* CS261- Assignment 1 - Q.5 */
 /* Name: Chris Kearns
  * Date: 10 April 2016
- * Solution description: Demo program for converting c-strings to 
- * alternating uppercase / lowercase in C via ASCII arithmetic.
+ * Demo program for converting c-strings to alternating uppercase 
+ * and lowercase in C via ASCII arithmetic.
  */
- 
 #include <stdio.h>
 #include <stdlib.h>
 
-
-/*converts ch to upper case, assuming it is in lower case currently*/
+/* Cconverts ch to upper case, assuming it is in lower case currently*/
 char toUpperCase(char ch){
      return ch-'a'+'A';
 }
@@ -51,7 +48,7 @@ void sticky(char* word){
 
 
 int main(){
-    /* Read word from the keyboard using scanf. */
+	/* Read word from the keyboard using scanf. */
 	printf("Enter the string to be converted to alternating upper/lower case!\n"
 		"Keep the following in mind!\n"
 		"Maximum of 80 characters.\n"
@@ -60,7 +57,7 @@ int main(){
 	char word[80];
 	scanf("%80[0-9a-zA-Z `~!@#$%^&*()_+=-;[/]{}|]", word); //see note [1]
 
-    /* Call sticky. */
+	/* Call sticky. */
 	sticky(word);
 
 	/* Print the new word. */
@@ -69,8 +66,7 @@ int main(){
     return 0;
 }
 /*
-[Citations and notes]
-[1] Line 55 is a regular expression. Allows upto 80 characters input. Between the "[" 
+[Notes]
+[1] Line 58 is a regular expression. Allows upto 80 characters input. Between the "[" 
 	and "]" are the characters this scanf() will accept, including spaces.
-	Q5 specifications are met, single word will alternate upper/lower case.
 */
