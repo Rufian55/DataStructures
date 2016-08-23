@@ -1,6 +1,6 @@
 /**************************************************************************
-** CS261-400-S16	Assignment 3, Part 1	Due: 24 Apr 2016
-** Chris Kearns (kearnsc@oregonstate.edu)
+** Date: 24 Apr 2016
+** Author: Chris Kearns
 ** linkedList.h
 ** A linked list deque declaration file in C and utilized as below.
 ** Compile:
