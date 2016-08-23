@@ -1,3 +1,9 @@
+/****************************************************************
+ * circularListMain.c
+ * Author: Chris Kearns
+ * Date: 23 Aug 2016
+ * Testing main for a circular linked list deque implementation.
+****************************************************************/
 #include "circularList.h"
 #include <stdio.h>
 
