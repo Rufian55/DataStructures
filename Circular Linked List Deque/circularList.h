@@ -1,3 +1,9 @@
+/********************************************************************
+ * circularList.h
+ * Author: Chris Kearns
+ * Date: 23 Aug 2016
+ * Declaration file for a circular linked list deque in C.
+********************************************************************/
 #ifndef CIRCULAR_LIST_H
 #define CIRCULAR_LIST_H
 
@@ -21,7 +27,6 @@ void circularListPrint(struct CircularList* list);
 void circularListReverse(struct CircularList* list);
 
 // Deque interface
-
 void circularListAddFront(struct CircularList* list, TYPE value);
 void circularListAddBack(struct CircularList* list, TYPE value);
 TYPE circularListFront(struct CircularList* list);
