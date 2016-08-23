@@ -1,4 +1,4 @@
-/* Name: Chris Kearns
+/* Author: Chris Kearns
  * Date: 10 April 2016
  * Demo program for converting c-strings to alternating uppercase 
  * and lowercase in C via ASCII arithmetic.
