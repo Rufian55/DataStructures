@@ -1,4 +1,5 @@
-/* File: bst.h
+/* Chris Kearns
+   File: bst.h
    Interface definition of the binary search tree data structure.
 */
 
@@ -21,8 +22,8 @@ int compare(TYPE left, TYPE right);
 /* function used to print TYPE values, define this in your compare.c file */
 void print_type(TYPE curval);
 
-struct BSTree;
 /* Declared in the c source file to hide the structure members from the user. */
+struct BSTree;
 
 /* Initialize binary search tree structure. */
 void initBSTree(struct BSTree *tree);
@@ -36,7 +37,7 @@ void clearBSTree(struct BSTree *tree);
 /* Deallocate nodes in BST and deallocate the BST structure. */
 void deleteBSTree(struct BSTree *tree);
 
-/*-- BST Bag interface --*/
+/*-- Binary Search Tree interface --*/
 int isEmptyBSTree(struct BSTree *tree);
 int sizeBSTree(struct BSTree *tree);
 void addBSTree(struct BSTree *tree, TYPE val);
