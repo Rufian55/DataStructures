@@ -1,20 +1,16 @@
-/* CS261- Assignment 1 - Q.1 */
 /* Name: Chris Kearns
  * Date: 10 April 2016
- * Solution description: Demo program illustrating manipulating structs
- * with pointers and pointer arithmetic in a dynamic array of structs.
+ * Demo program illustrating manipulating structs  with pointers and pointer 
+ * arithmetic in a dynamic array of structs.
  */
- 
 #include <stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
 
 struct student{
 	int id;
 	int score;
 };
-
 
 /***************************************************************************************
 ** Function: allocate()
@@ -91,7 +87,7 @@ void output(struct student* students) {
 ** Pre-Conditions: a stuct student definition and a pointer to same with values.
 ** Post-Conditions: No changes.
 ****************************************************************************************/
-void summary(struct student* students){
+void summary(struct student* students) {
 	int i = 0;
 	int minScore = 100;
 	int maxScore = 0;
@@ -117,13 +113,13 @@ void summary(struct student* students){
 ** Pre-Conditions: a non NULL stuct student.
 ** Post-Conditions: Valgrind checks good!
 ****************************************************************************************/
-void deallocate(struct student* stud){
+void deallocate(struct student* stud) {
 	if(stud != NULL)
 		free(stud);
 }
 
 
-int main(){
+int main() {
 	struct student* stud = NULL;
 
 	/*call allocate*/
@@ -132,7 +128,7 @@ int main(){
 	/*call generate*/
 	generate(stud);
 
-    /*call output*/
+	 /*call output*/
 	output(stud);
 
 	/*call summary*/
@@ -143,8 +139,3 @@ int main(){
 
 	return 0;
 }
-
-/*
-[Citations]
-[1] Adpated from Programming in C, 4th Edition, Kochan, 2015, pg 386
-*/
