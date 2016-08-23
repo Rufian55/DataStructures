@@ -1,11 +1,8 @@
-/* CS261- Assignment 1 - Q.3 */
 /* Name: Chris Kearns
  * Date: 10 April 2016
- * Solution description: Demo program in C that instantiates a randomly
- * filled integer array and performs an ascending order sort using the
- * selection sort algorithm.
+ * Demo program in C that instantiates a randomly filled integer array and performs
+ * an ascending order sort using the selection sort algorithm.
  */
- 
 #include <stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -19,7 +16,7 @@
  ** Pre-Conditions: An int array with at least one ID and score pair value inserted.
  ** Post-Conditions: number array sorted by score retaining pairing to ID.
  ****************************************************************************************/
- void sort(int* number, int n){ // See citation [1]
+ void sort(int* number, int n){
 	int startScan;
 	int minIndex;
 	int minValue;
@@ -74,8 +71,3 @@ int main(){
 
 	return 0;
 }
-
-/*
-[Citations]
-[1] Adapted from the selection sort algorithm, C++ Early Objects, 8th Edition, Gaddis, 2014, page 611.
-*/
