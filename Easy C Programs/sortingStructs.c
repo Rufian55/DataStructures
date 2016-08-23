@@ -1,15 +1,12 @@
-/* CS261- Assignment 1 - Q.4 */
-/* Name: Chris Kearns
+/* Author: Chris Kearns
  * Date: 10 April 2016
- * Solution description: Demo program in C that instantiates a randomly
- * filled dynamic struct array and performs an ascending order sort on student
- * scores using the selection sort algorithm. 
+ * Demo program in C that instantiates a randomly filled dynamic struct array
+ * and performs an ascending order sort on student scores using the selection
+ * sort algorithm. 
  */
- 
 #include <stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
 
 struct student{
 	int id;
@@ -20,12 +17,10 @@ struct student{
 ** Function: sort()
 ** Description: Sorts the given array of n students based on their score where where
 ** length n is the number of students using a bubble sort variant algorithm.
-** See citation[1]
 ** Parameters: int pointer to students array and int n, the size of the array argument.
 ** Pre-Conditions: An int array with at least one ID and score pair value inserted.
 ** Post-Conditions: students array sorted by score retaining pairing to ID.
 ****************************************************************************************/
-/*Sort . */
 void sort(struct student* students, int n){
 	int i;
 	int j;
@@ -42,21 +37,20 @@ void sort(struct student* students, int n){
 }
 
 
-int main(){
-	/*Declare an integer n and assign it a value.*/
+int main() {
 	int n = 20;
 
-	/*Allocate memory for n students using malloc.*/
+	/* Allocate memory for n students using malloc.*/
 	struct student *students = (struct student *)malloc(sizeof(struct student) * n);
 
-	/*Generate random IDs and scores for the n students, using rand().*/
+	/* Generate random IDs and scores for the n students, using rand().*/
 	int i = 0;
 	int randomId = -1;
 	int *studsID = (int *)malloc(sizeof(int) * (n + 1)); // changed (n + 1) to correct valgrind read error.
 	int flag = 0;
 	int randomScore = 0;
 
-	/*Initialize studsID array for keeping track of unique ID's issued.*/
+	/* Initialize studsID array for keeping track of unique ID's issued.*/
 	for (i = 0; i < n; i++) {
 		studsID[i] = i + 1;
 	}
@@ -99,8 +93,3 @@ int main(){
 	
 	return 0;
 }
-
-/*
-[Citations]
-[1] Adapted from Early C Objects, 8th Edition, 2014, Gaddis, pg. 611.
-*/
