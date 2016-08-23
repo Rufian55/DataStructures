@@ -1,6 +1,6 @@
 /*	file: compare.c
-	Chris Kearns  CS261-400-S16
-	Assingment 4  7 Apr 2016
+	Chris Kearns
+	7 Apr 2016
 	Implementation of BST's compare functions.
 */
 #include <stdio.h>
@@ -21,7 +21,7 @@ Very similar to the compareTo method in java or the strcmp function in c. It
  /* Type cast the value of void * to the desired type.
     Definition of TYPE in bst.h is void*, which means that left and
     right are void pointers. To compare left and right, first cast
-    left and right to the corresponding pointer type (struct data *),
+    left and right to the corresponding pointer type (see struct data *),
     and then compare the values pointed by the casted pointers.
     DO NOT compare the addresses pointed by left and right,
     i.e. "if (left < right)".
@@ -41,7 +41,7 @@ int compare(TYPE left, TYPE right) {
 	return 0; /* myLeft->number == myRight->number */
 }
 
-/*Print funcction that type casts the value of void * to the desired type.
+/* Print funcction that type casts the value of void * to the desired type.
   Chagne printf %modifier to match desired print type.*/
 void print_type(TYPE curval) {
 	struct data * myVal = (struct data *)curval;
