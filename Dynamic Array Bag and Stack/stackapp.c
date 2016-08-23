@@ -1,25 +1,24 @@
 /**************************************************************************
-** CS261-400-S16
-** Chris Kearns (kearnsc@oregonstate.edu)
-** Assignement 2, Part 3
-** stackapp.c: Stack application for validating balanced [{()}] in input
+** stackapp.c
+** Author: Chris Kearns
+** Stack application for validating balanced [{()}] in input
 ** string. See algorithm at bottom of file.
 ** Call from command line:	prog '[{()}]'
-** Implementation of stack and bag with unerlying array.
-** Requires #include dynArray.h
+** Requires #include dynArray.h (Implementation of stack and bag with
+** underlying array.)
 **************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include "dynArray.h"
 
 
-/* ***************************************************************
-Using stack to check for unbalanced parentheses.
-***************************************************************** */
+/****************************************************************
+	Using stack to check for unbalanced parentheses.
+******************************************************************/
 
 /* Returns the next character of the string, once reaches end return '0' (zero)
 	param: 	s pointer to a string 	
-	pre:		s is not null		
+	pre:	s is not null		
 */
 char nextChar(char* s) {
 	static int i = -1;	
@@ -34,15 +33,13 @@ char nextChar(char* s) {
 
 /* Checks whether the (), {}, and [] are balanced or not
 	param: 	s pointer to a string. 	
-	pre:		s is not null.
+	pre:	s is not null.
 	post:	Stack is deleted and we return res.
-	ret:		int 1 for true, 0 for false.
-	Citation:	Implementation of algorithm found at classnotes.pdf,
-			Chap. 6, top of pg. 5.
+	ret:	int 1 for true, 0 for false.
 */
 int isBalanced(char* s) {
 	DynArr *dyn;
-	dyn = newDynArr(12);/* arbitrarily selected array size. */
+	dyn = newDynArr(12);	/* arbitrarily selected array size. */
 	char r;
 	int res = 0;
 
