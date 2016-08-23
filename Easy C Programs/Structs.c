@@ -1,3 +1,7 @@
+/* Struct memeory and manipulation demo program.
+ * Author: Chris Kearns
+ * Date: 23 Aug 2016
+ */
 #include <stdio.h>
 #include<stdlib.h>
 #include<math.h>
