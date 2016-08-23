@@ -1,6 +1,6 @@
 /* File: bst.c
-   Chris Kearns  CS261-400	7 Apr 2016
-   Assignment 4
+   Chris Kearns
+   7 Apr 2016
    Implementation of the binary search tree data structure.
 */
 #include <stdlib.h>
@@ -20,12 +20,11 @@ struct BSTree {
 	int cnt;
 };
 
-/*----------------------------------------------------------------------------*/
 /* Function to initialize the binary search tree.
 param:	tree
-pre:		tree is not null
+pre:	tree is not null
 post:	tree size is 0
-		root is null
+	root is null
 */
 void initBSTree(struct BSTree *tree) {
 	tree->cnt  = 0;
@@ -34,9 +33,9 @@ void initBSTree(struct BSTree *tree) {
 
 /* Function to create a binary search tree.
 param:	none
-pre:		none
+pre:	none
 post:	tree->count = 0
-		tree->root = 0;
+	tree->root = 0;
 */
 struct BSTree* newBSTree() {
 	struct BSTree *tree = (struct BSTree *)malloc(sizeof(struct BSTree));
@@ -45,10 +44,9 @@ struct BSTree* newBSTree() {
 	return tree;
 }
 
-/*----------------------------------------------------------------------------*/
 /* Function to free the nodes of a binary search tree
 param:	node - the root node of the tree to be freed
-pre:		none
+pre:	none
 post:	node and all descendants are deallocated
 */
 void _freeBST(struct Node *node) {
@@ -61,10 +59,10 @@ void _freeBST(struct Node *node) {
 
 /* Function to clear the nodes of a binary search tree
 param:	tree - a binary search tree
-pre:		tree ! = null
+pre:	tree ! = null
 post:	the nodes of the tree are deallocated
-		tree->root = 0;
-		tree->cnt = 0
+	tree->root = 0;
+	tree->cnt = 0
 */
 void clearBSTree(struct BSTree *tree) {
 	_freeBST(tree->root);
@@ -74,7 +72,7 @@ void clearBSTree(struct BSTree *tree) {
 
 /* Function to deallocate a dynamically allocated binary search tree
 param:	tree - the binary search tree
-pre:		tree != null;
+pre:	tree != null;
 post:	all nodes and the tree structure itself are deallocated.
 */
 void deleteBSTree(struct BSTree *tree) {
@@ -83,10 +81,9 @@ void deleteBSTree(struct BSTree *tree) {
 	free(tree);
 }
 
-/*----------------------------------------------------------------------------*/
 /*  Function to determine if a binary search tree is empty.
 param:	tree - the binary search tree
-pre:		tree is not null
+pre:	tree is not null
 */
 int isEmptyBSTree(struct BSTree *tree) {
 	return (tree->cnt == 0);
@@ -94,20 +91,19 @@ int isEmptyBSTree(struct BSTree *tree) {
 
 
 /* Function to determine the size of a binary search tree
-param: tree - the binary search tree
-pre:	  tree is not null
+param	tree - the binary search tree
+pre:	tree is not null
 */
 int sizeBSTree(struct BSTree *tree) {
 	assert(tree != 0);
 	return tree->cnt;
 }
 
-/*----------------------------------------------------------------------------*/
 /* Recursive helper function to add a node to the binary search tree that uses
 	the compare() function to compare values.
 param:	cur - the current root node
-		val	the value to be added to the binary search tree
-pre:		val is not null
+val	the value to be added to the binary search tree
+pre:	val is not null
 */
 struct Node *_addNode(struct Node *cur, TYPE val) {
 	if (cur == NULL) {
@@ -133,11 +129,11 @@ struct Node *_addNode(struct Node *cur, TYPE val) {
 
 /* Function to add a value to the binary search tree
 param:	tree - the binary search tree
-		val - the value to be added to the tree
-pre:		tree is not null
-		val is not null
+	val - the value to be added to the tree
+pre:	tree is not null
+	val is not null
 post:	tree size increased by 1
-		tree now contains the value, val
+	tree now contains the value, val
 */
 void addBSTree(struct BSTree *tree, TYPE val) {
 	assert(tree != 0);
@@ -149,9 +145,9 @@ void addBSTree(struct BSTree *tree, TYPE val) {
 /* Function to determine if the binary search tree contains a particular element
    Uses the compare() function to compare values.
 param:	tree	the binary search tree
-		val - the value to search for in the tree
-pre:		tree is not null
-		val is not null
+	val - the value to search for in the tree
+pre:	tree is not null
+	val is not null
 post:	none
 */
 int containsBSTree(struct BSTree *tree, TYPE val) {
@@ -190,7 +186,7 @@ int containsBSTree(struct BSTree *tree, TYPE val) {
 /* Helper function to find the left most child of a node and return the value
    of the left most child of cur.
 param:	cur - the current node
-pre:		cur is not null
+pre:	cur is not null
 post:	 none
 */
 TYPE _leftMost(struct Node *cur) {
@@ -211,7 +207,7 @@ TYPE _leftMost(struct Node *cur) {
    it returns the right child of cur and frees cur.
    Note: If done iteratively, the above does not apply.
 param:	cur - the current node
-pre:		cur is not null
+pre:	cur is not null
 post:	the left most node of cur is not in the tree
 */
 struct Node *_removeLeftMost(struct Node *cur) {
@@ -234,10 +230,10 @@ struct Node *_removeLeftMost(struct Node *cur) {
 /* Recursive helper function to remove a node from the tree that 
    uses the compare() function to compare values.
 param:	cur - the current node
-		val - the value to be removed from the tree
-pre:		val is in the tree
-		cur is not null
-		val is not null
+	val - the value to be removed from the tree
+pre:	val is in the tree
+	cur is not null
+	val is not null
 */
 struct Node *_removeNode(struct Node *cur, TYPE val) {
 	assert(cur != NULL && val != NULL);
@@ -270,10 +266,10 @@ struct Node *_removeNode(struct Node *cur, TYPE val) {
 
 /* Function to remove a value from the binary search tree.
 param:	tree - the binary search tree
-		val - the value to be removed from the tree
-pre:		tree is not null
-		val is not null
-		val is in the tree
+	val - the value to be removed from the tree
+pre:	tree is not null
+	val is not null
+	val is in the tree
 post:	tree size is reduced by 1
 */
 void removeBSTree(struct BSTree *tree, TYPE val) {
@@ -345,8 +341,8 @@ struct BSTree * buildBSTTree() {
 
 /* Function to print the result of a test function
 param:	predicate - the result of the test 
-		nameTestFunction - the name of the function that has been tested
-		message
+	nameTestFunction - the name of the function that has been tested
+	message
 */
 void printTestResult(int predicate, char *nameTestFunction, char *message){
 	if (predicate)
@@ -363,12 +359,12 @@ void testAddNode() {
 	myData1.number = 50;
 	myData1.name = "rooty";
 	addBSTree(tree, &myData1);
-	//check the root node
+	// Check the root node.
 	if (compare(tree->root->val, (TYPE *) &myData1) != 0) {
 		printf("addNode() test: FAIL to insert 50 as root\n");
 		return;
 	}
-	//check the tree->cnt value after adding a node to the tree
+	// Check the tree->cnt value after adding a node to the tree.
 	else if (tree->cnt != 1) {
 		printf("addNode() test: FAIL to increase count when inserting 50 as root\n");
 		return;
@@ -379,7 +375,7 @@ void testAddNode() {
 	myData2.name = "lefty";
 	addBSTree(tree, &myData2);
 
-	//check the position of the second element that is added to the BST tree
+	// Check the position of the second element that is added to the BST tree
 	if (compare(tree->root->left->val, (TYPE *) &myData2) != 0) {
 		printf("addNode() test: FAIL to insert 13 as left child of root\n");
 		return;
@@ -394,7 +390,7 @@ void testAddNode() {
 	myData3.name = "righty";
 	addBSTree(tree, &myData3);
 
-	//check the position of the third element that is added to the BST tree    
+	// Check the position of the third element that is added to the BST tree    
 	if (compare(tree->root->right->val, (TYPE *) &myData3) != 0) {
 		printf("addNode() test: FAIL to insert 110 as right child of root\n");
 		return;
@@ -409,7 +405,7 @@ void testAddNode() {
 	myData4.name = "righty of lefty";
 	addBSTree(tree, &myData4);
 
-	//check the position of the fourth element that is added to the BST tree
+	// Check the position of the fourth element that is added to the BST tree
 	if (compare(tree->root->left->left->val, (TYPE *) &myData4) != 0) {
 		printf("addNode() test: FAIL to insert 10 as left child of left of root\n");
 		return;
@@ -512,7 +508,7 @@ void testRemoveNode() {
 	printTestResult(cur == NULL, "_removeNode", "remove right of root 4th try");
 }
 
-/* Main function for testing different functions of assign04. */
+/* Main function for testing the different functions. */
 int main(int argc, char *argv[]){	
 	//Test Suite
 	testAddNode();
