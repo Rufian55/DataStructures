@@ -7,7 +7,6 @@
 ********************************************************************/
 #include "Dadequeue.h"
 
-
 void _dequeSetCapacity(struct deque *d, int newCap) {
 	int i,j;
 	/* Create a new underlying array*/
