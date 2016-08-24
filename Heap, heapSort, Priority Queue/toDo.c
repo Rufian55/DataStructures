@@ -184,5 +184,3 @@ int main() {
 	dyDelete(list);
 	return 0;
 }
-
-// [1] asked on SO to get this working. http://stackoverflow.com/questions/37173034/fopen-with-pathname-and-variable-filename-not-working
