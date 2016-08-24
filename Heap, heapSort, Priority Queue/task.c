@@ -1,5 +1,5 @@
 /* Tasks, for Heap Based Priority Queue
- * Name: Chris Kearns 
+ * Author: Chris Kearns 
  * Date: 22 May 2016
  */
 
@@ -33,7 +33,7 @@ void taskDelete(Task* task) {
 	-1 if left's priority < right's priority,
 	 1 if left's priority > right's priority,
 	 0 if left's priority == right's priority.
- param left:		Task pointer.
+ param left:	Task pointer.
  param right:	Task pointer.
 */
 int taskCompare(void* left, void* right) {
