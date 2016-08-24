@@ -1,6 +1,6 @@
-/*
- * CS 261 Data Structures
- * Assignment 6
+/* CuTest based Test Suite for checking correctness of the Hash Map
+ * Sean Moore
+ * Oregon State University
  */
 
 #include "CuTest.h"
@@ -359,4 +359,3 @@ int main() {
     CuSuiteDelete(suite);
     return 0;
 }
-
