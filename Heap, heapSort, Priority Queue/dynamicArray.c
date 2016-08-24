@@ -1,7 +1,7 @@
 /* Min Heap Implementation via Dynamic Array
  * Includes heap, stack, bag, ordered bag, and iterator functionality.
  * dynamicArray.c
- * Name: Chris Kearns
+ * Author: Chris Kearns
  * Date: 22 May 2016
  */
 
