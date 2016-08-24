@@ -222,7 +222,7 @@ void adjustHeap(DynamicArray* heap, int last, int position, compareFunction comp
  * @param compare:  pointer to compare function.
  */
 void buildHeap(DynamicArray* heap, compareFunction compare) {
-	int max = dySize(heap);		// size of the array.
+	int max = dySize(heap);			// size of the array.
 	int i;					// used in for loop to find first last non leaf node.
 	for (i = max/2-1; i >= 0; i--) {
 		adjustHeap(heap, max, i, compare);
@@ -236,20 +236,20 @@ void buildHeap(DynamicArray* heap, compareFunction compare) {
  * @param compare:	Pointer to compare function.
 */
 void dyHeapAdd(DynamicArray* heap, TYPE value, compareFunction compare) {
-	int parent;					// The parent of the next open element.
+	int parent;				// The parent of the next open element.
 	int position = dySize(heap);		// The index of the next open element in the heap array (array size).
-	dyAdd(heap, value);				// Adds value at next open position and resets capacity if necessary.
+	dyAdd(heap, value);			// Adds value at next open position and resets capacity if necessary.
 
 	/* Percolate up */
-	while (position != 0) {										// while != to the first element in the array.
-		parent = (position - 1) / 2;								// Compute parent index.
+	while (position != 0) {							// while != to the first element in the array.
+		parent = (position - 1) / 2;					// Compute parent index.
 		if (compare(dyGet(heap, position), dyGet(heap, parent)) == -1) { // If position < parent,
-			dySwap(heap, parent, position);						// swap them,
-			position = parent;									// Update position & keep percolating up.
+			dySwap(heap, parent, position);				// swap them,
+			position = parent;					// Update position & keep percolating up.
 		}
 		else return;
 	}
-//	adjustHeap(heap, dySize(heap) - 1, 0, compare);
+	adjustHeap(heap, dySize(heap) - 1, 0, compare);
 }
 
 /**
@@ -259,9 +259,9 @@ void dyHeapAdd(DynamicArray* heap, TYPE value, compareFunction compare) {
  */
 void dyHeapRemoveMin(DynamicArray* heap, compareFunction compare) {
 	int last = dySize(heap) - 1;
-	assert(last >= 0);					// Test harness runs it all the way down to 0.
-	dyPut(heap, dyGet(heap, last), 0);		// Gets the last element and overwrites it at min.
-	dyRemoveAt(heap, last);				// Removes last element.
+	assert(last >= 0);			// Test harness runs it all the way down to 0.
+	dyPut(heap, dyGet(heap, last), 0);	// Gets the last element and overwrites it at min.
+	dyRemoveAt(heap, last);			// Removes last element.
 	adjustHeap(heap, last, 0, compare);	// Puts the heap back into min order.
 }
 
