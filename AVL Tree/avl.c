@@ -1,4 +1,4 @@
-﻿#include "avl.h"
+#include "avl.h"
 
 void initAVLTree(struct AVLTree *tree) {
    tree->root = 0;
