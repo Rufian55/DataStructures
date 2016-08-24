@@ -1,6 +1,5 @@
-/* CS 261 Data Structures
- * Assignment 7
- * Author: Sean Moore
+/* Author: Sean Moore
+ * Oregon State University
  * Date: 5/19/2016
  */
 
