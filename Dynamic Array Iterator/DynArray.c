@@ -66,8 +66,6 @@ void freeDynArr(struct DynArr * da) {
 ** Parameters: struct DynArr * da
 ** Pre-Conditions: An existing struct DynArr object.
 ** Post-Conditions: No change.
-** NOTE: This function not used by Bag implementation but retained for potential future
-** use.
 ****************************************************************************************/
 TYPE sizeDynArr(struct DynArr * da) {
 	return da->size;
@@ -97,8 +95,6 @@ void addDynArr(struct DynArr * da, TYPE e) {
 ** Parameters: struct DynArr * da, postion of value to be removed.
 ** Pre-Conditions: An existing struct DynArr object and a known valid position.
 ** Post-Conditions: struct DynArr array one value removed.
-** NOTE: This function not used by Bag implementation but retained for potential future
-** use.
 ****************************************************************************************/
 void removeAtDynArr(struct DynArr * da, int position) {
 	/* Ensure that the index position is valid */
@@ -120,8 +116,6 @@ void removeAtDynArr(struct DynArr * da, int position) {
 ** Parameters: struct DynArr * da, position of value to be removed.
 ** Pre-Conditions: An existing struct DynArr object and a known valid position.
 ** Post-Conditions: struct DynArr array value returned by position.
-** NOTE: This function not used by Stack implementation but retained for potential future
-** use.
 ****************************************************************************************/
 TYPE getDynArr(struct DynArr * da, int position) {
 	/* Ensure that the index position is valid */
@@ -138,8 +132,6 @@ TYPE getDynArr(struct DynArr * da, int position) {
 ** Parameters: struct DynArr * da, int position, Type value to be inserted.
 ** Pre-Conditions: An existing struct DynArr object, a known valid position, and a value.
 ** Post-Conditions: struct DynArr array same number of elements, one now different.
-** NOTE: This function not used by Stack implementation but retained for potential future
-** use.
 ****************************************************************************************/
 void putDynArr(struct DynArr * da, int position, TYPE value) {
 	/* Ensure that the index position is valid */
@@ -159,8 +151,7 @@ void putDynArr(struct DynArr * da, int position, TYPE value) {
 ** Description: Remove the first occurence of the value if found in the bag.
 ** Parameters: struct DynArr * da.
 ** Pre-Conditions: An existing struct DynArr object with at least one stored value.
-** Post-Conditions: The stack has one value "removed" via set to NULL and size var
-** decremented.
+** Post-Conditions: The array has one value "removed" and array is resized.
 ****************************************************************************************/
 void removeDynArr(struct DynArr * da, TYPE test) {
 	int i;
