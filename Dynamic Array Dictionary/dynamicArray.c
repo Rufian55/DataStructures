@@ -249,7 +249,7 @@ void dyHeapAdd(DynamicArray* heap, TYPE value, compareFunction compare) {
 		}
 		else return;
 	}
-	adjustHeap(heap, dySize(heap) - 1, 0, compare);
+//	adjustHeap(heap, dySize(heap) - 1, 0, compare);	// Shouldn't be nescessary...
 }
 
 /**
