@@ -1,7 +1,6 @@
 /* Test Battery
  * Author: Sean Moore
  * Oregon State Unversity
- * Date: 4/29/2016
  */
 
 #include "CuTest.h"
