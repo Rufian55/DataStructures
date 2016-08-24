@@ -2,7 +2,6 @@
  * Name: Chris Kearns
  * Date: 22 May 2016
  */
-
 #include "dynamicArray.h"
 #include "task.h"
 #include <stdlib.h>
@@ -161,7 +160,6 @@ void handleCommand(DynamicArray* list, char command) {
 }
 
 int main() {
-	// Implement
 	printf("\n\n** TO-DO LIST APPLICATION **\n\n");
 	DynamicArray* list = dyNew(8);
 	char command = ' ';
@@ -175,12 +173,15 @@ int main() {
 			"'p' to print the list\n"
 			"'e' to exit the program\n"
 	);
+	
 	command = getchar();
 	// Eat newlines
 	while (getchar() != '\n');
 		handleCommand(list, command);
 	}
+	
 	while (command != 'e');
+
 	dyDelete(list);
 	return 0;
 }
