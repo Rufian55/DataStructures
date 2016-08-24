@@ -1,3 +1,9 @@
+/*********************************************************************************
+ * Concordance (word count) implementation via hashMap.c and some performance
+ * measuring in main().
+ * Author: Chris Kearns
+ * Date: 26 Apr 2016
+*********************************************************************************/ 
 #include "hashMap.h"
 #include <stdlib.h>
 #include <stdio.h>
