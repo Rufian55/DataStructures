@@ -23,7 +23,7 @@
 
 struct DynArr {
 	TYPE * data;	// Pointer to the data array.
-	int size;		// Number of elements in the array.
+	int size;	// Number of elements in the array.
 	int capacity;	// Capcity of the array.
 };
 
