@@ -14,7 +14,7 @@ struct HashLink {
 };
 
 struct HashMap {
-    HashLink** table;	// An array of pointers to HashLinks.
+    HashLink** table;	    // An array of pointers to HashLinks.
     int size;			// Number of links in the table.
     int capacity;		// Number of buckets in the table.
 };
