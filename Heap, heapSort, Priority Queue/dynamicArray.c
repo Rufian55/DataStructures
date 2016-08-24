@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <assert.h>
 
+// Lines 14 through 19 for testing correctness of this program and can be deleted.
 #define TESTING
 
 #ifndef TESTING
@@ -266,7 +267,7 @@ void dyHeapAdd(DynamicArray* heap, TYPE value, compareFunction compare) {
 
 /**
  * Removes the first element, which has the min priority, from the heap.
- * @param heap:	The underlying array.
+ * @param heap:		The underlying array.
  * @param compare:	Pointer to the compare function.
  */
 void dyHeapRemoveMin(DynamicArray* heap, compareFunction compare) {
