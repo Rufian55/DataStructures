@@ -1,7 +1,5 @@
-/*
- * CS 261-400-S16 Data Structures
- * Assignment 6
- * Name: Chris Kearns
+/* hashMap.c
+ * Author: Chris Kearns
  * Date: 29 May 2016
  */
 
@@ -130,7 +128,7 @@ void hashMapDelete(HashMap* map) {
 int* hashMapGet(HashMap* map, const char* key) {
 	int hash = HASH_FUNCTION(key);
 	hash = (int)(labs(hash) % hashMapCapacity(map));
-	//access the map at that index/list node, and return the value. 
+	// Access the map at that index/list node, and return the value. 
 	if (map->table[hash] != NULL) {
 		HashLink *cur = map->table[hash];
 		while (cur != NULL) {
