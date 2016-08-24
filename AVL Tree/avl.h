@@ -14,7 +14,7 @@
 struct AVLNode {
 	void * val;
 	struct AVLNode *left; /* Left child. */
-	struct AVLNode *rght; /* Right child. */
+	struct AVLNode *right; /* Right child. */
 	int hght;
 };
 
