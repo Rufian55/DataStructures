@@ -92,7 +92,7 @@ TYPE LinkedListBack(struct linkedList *q){
 	return q->backSentinel->prev->value;
 }
 
-/*
+/* // Testing main() for the Linked List implementation above.
 int main(int argc, char* argv[]) {
 	struct linkedList aLList;
 	struct linkedList *LL = 0;
