@@ -1,5 +1,5 @@
-#ifndef Worksheet17
-#define Worksheet17
+#ifndef LLSTACK
+#define LLSTACK
 #define TYPE int
 
 struct link {
