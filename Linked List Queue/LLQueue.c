@@ -2,7 +2,7 @@
 ** LLQueue.c
 ** Author: Chris Kearns
 ** A linked list Queue implementation in C.
-** Compile with gcc -Wall -std=c99 LLQueue.h LLQueue.c -o WS18
+** Compile with gcc -Wall -std=c99 LLQueue.h LLQueue.c -o LLQueue
 **************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
