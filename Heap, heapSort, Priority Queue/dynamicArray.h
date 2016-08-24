@@ -58,12 +58,6 @@ TYPE dyIteratorNext(DynamicArrayIterator* iterator);
 void dyIteratorRemove(DynamicArrayIterator* iterator);
 
 // Utility
-/**
- * Prints the size, capacity, and elements of array, calling the print
- * function on each element.
- * @param array
- * @param print
- */
 void dyPrint(DynamicArray* array, printFunction print);
 void dyCopy(DynamicArray* source, DynamicArray* destination);
 
