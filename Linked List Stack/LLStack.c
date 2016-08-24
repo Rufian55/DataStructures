@@ -1,9 +1,8 @@
 /**************************************************************************
-** CS261-400-S16
-** Chris Kearns (kearnsc@oregonstate.edu)
-** Worksheet 17
-** Worksheet17.c: A linked list Stack implementation
-** Compile with gcc -Wall -std=c99 Worksheet17.h Worksheet17.c -o WS17
+** LLStack.c
+** Author: Chris Kearns
+** A Linked List Stack implementation
+** Compile with gcc -Wall -std=c99 LLStack.h LLStack.c -o LLStack
 **************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
