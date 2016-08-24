@@ -10,7 +10,7 @@
 #define blue	"\033[1;34m"
 #define magenta  "\033[1;35m"
 #define cyan	"\033[1;36m"
-#define none	"\033[0m"			/* "Flush" to default. */
+#define none	"\033[0m"		/* "Flush" to default. */
 
 /*
  * Allocates a string for the next word in the file and returns it. This string
@@ -91,7 +91,7 @@ void case2lower(char input[]) {
 
 /*
  * Converts a mixd char c-string to alpha only.
- * @param char input[]	The c-string to be converted. See Citation[1]
+ * @param char input[]	The c-string to be converted.
  */
 void stripPunc(char input[]) {
 	int i, j;
@@ -189,4 +189,3 @@ int main(int argc, const char** argv) {
 	hashMapDelete(map);
 	return 0;
 }
-// Citation[1] Adapted from h ttp://www.programiz.com/c-programming/examples/remove-characters-string (which had an error!)
