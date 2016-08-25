@@ -1,6 +1,5 @@
-/* CS 261 Data Structures
- * Assignment 7
- * Name: Chris Kearns
+/* Graph implementation with BFS, DFS and recursive functionality.
+ * Author: Chris Kearns
  * Date: 05 Jun 2016
  */
 
@@ -79,9 +78,6 @@ static void createEdge(Vertex* v1, Vertex* v2) {
 
 /* Determines if there is a path from the source to the destination using a
  * recursive depth-first search starting at the source.
- * 
- * You can use this function to test the correctness of the others.
- * 
  * @param graph
  * @param source
  * @param destination
@@ -104,11 +100,11 @@ int dfsIterative(Graph* graph, Vertex* source, Vertex* destination) {
 	if (source == destination)
 		return 1;
 	Deque *aStack = dequeNew();			// Reachable vertice container.
-	dequePushBack(aStack, source);		// Push source onto Reachable stack.
+	dequePushBack(aStack, source);			// Push source onto Reachable stack.
 	while (!dequeIsEmpty(aStack)) {
 		Vertex* cur = dequeBack(aStack);	// Cur set to top of stack.
 		dequePopBack(aStack);			// Remove cur from Reachable..
-		cur->isVisited = 1;				// Mark cur as visited.
+		cur->isVisited = 1;			// Mark cur as visited.
 		if (cur == destination) {		// Is reachable!
 			dequeDelete(aStack);
 			return 1;
@@ -135,11 +131,11 @@ int bfsIterative(Graph* graph, Vertex* source, Vertex* destination) {
 	if (source == destination)
 		return 1;
 	Deque *aQueue = dequeNew();			// Reachable vertices container.
-	dequePushBack(aQueue, source);		// Push source onto back of Queue
+	dequePushBack(aQueue, source);			// Push source onto back of Queue
 	while (!dequeIsEmpty(aQueue)) {
 		Vertex* cur = dequeFront(aQueue);	// cur set to front of Queue.
 		dequePopFront(aQueue);			// Pop the front of Queue.
-		cur->isVisited = 1;				// Mark cur as visited.
+		cur->isVisited = 1;			// Mark cur as visited.
 		if (cur == destination) {		// Is reachable!
 			dequeDelete(aQueue);
 			return 1;
@@ -265,7 +261,7 @@ Graph* loadGraph(const char* fileName) {
 	}
 
 	// Create edges
-    while (fgets(buffer, sizeof buffer, file) != NULL) {
+	while (fgets(buffer, sizeof buffer, file) != NULL) {
 		char* begin = buffer;
 		char* end = NULL;
 
