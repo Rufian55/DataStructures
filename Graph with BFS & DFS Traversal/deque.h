@@ -1,12 +1,6 @@
 #ifndef DEQUE_H
 #define DEQUE_H
 
-/* CS 261 Data Structures
- * Assignment 7
- * Author: Sean Moore
- * Date: 5/17/2016
- */
-
 typedef void* Type;
 typedef struct Link Link;
 typedef struct Deque Deque;
