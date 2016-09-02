@@ -172,15 +172,13 @@ int main() {
 			"'r' to remove the first task\n"
 			"'p' to print the list\n"
 			"'e' to exit the program\n"
-	);
-	
-	command = getchar();
-	// Eat newlines
-	while (getchar() != '\n');
-		handleCommand(list, command);
-	}
-	
-	while (command != 'e');
+		);
+		command = getchar();
+		// Eat newlines
+		while (getchar() != '\n') {
+			handleCommand(list, command);
+		}
+	} while (command != 'e');
 
 	dyDelete(list);
 	return 0;
